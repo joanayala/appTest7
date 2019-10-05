@@ -33,7 +33,7 @@ class author(main):
         verbose_name = 'Author'
         verbose_name_plural = 'Authors'
     def __str__(self):
-        return '{0},{1}'.format(self.first_name,self.last_name)
+        return '{0}{1}{2}'.format(self.first_name," ",self.last_name)
 
 class post(main):
     title = models.CharField('Title', max_length=100, unique=True)
